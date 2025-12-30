@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
+/* Base */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a; /* slate-900 */
+}
+
+/* Make form elements look consistent */
+.input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  background: rgba(15, 23, 42, 0.03);
+  padding: 12px 14px;
+  color: rgba(15, 23, 42, 0.92);
+  outline: none;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.input::placeholder {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.input:focus {
+  border-color: rgba(255, 140, 0, 0.55);
+  background: rgba(255, 140, 0, 0.06);
+}
+
+/* Remove the ugly default marker for <summary> */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Nice selection */
+::selection {
+  background: rgba(255, 140, 0, 0.25);
 }
