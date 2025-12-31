@@ -1,6 +1,14 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import {
+  PiggyBank,
+  Home as HomeIcon,
+  TrendingUp,
+  Receipt,
+  Wallet,
+  ShieldCheck,
+} from "lucide-react";
 
 type Lang = "de" | "ru";
 
@@ -210,7 +218,7 @@ function cn(...xs: Array<string | false | null | undefined>) {
 }
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>("de");
+  const [lang, setLang] = useState<Lang>("ru");
   const t = useMemo(() => T[lang], [lang]);
 
   function scrollToId(id: string) {
@@ -224,6 +232,25 @@ export default function Home() {
     alert(t.toastOk);
     (e.currentTarget as HTMLFormElement).reset();
   }
+  function ServiceIcon({ n }: { n: string }) {
+  const cls = "h-5 w-5 text-white";
+  switch (n) {
+    case "01":
+      return <PiggyBank className={cls} />;
+    case "02":
+      return <HomeIcon className={cls} />;
+    case "03":
+      return <TrendingUp className={cls} />;
+    case "04":
+      return <Receipt className={cls} />;
+    case "05":
+      return <Wallet className={cls} />;
+    case "06":
+      return <ShieldCheck className={cls} />;
+    default:
+      return null;
+  }
+}
 
   return (
     <div
@@ -392,14 +419,17 @@ export default function Home() {
                     {s.n}
                   </div>
 
-                  <div
-                    className="
-                      h-10 w-10 rounded-xl
-                      bg-gradient-to-br from-orange-500 to-orange-600
-                      ring-1 ring-orange-500/25
-                      shadow-lg shadow-orange-500/20
-                    "
-                  />
+                 <div
+  className="
+    h-10 w-10 rounded-xl
+    bg-gradient-to-br from-orange-500 to-orange-600
+    ring-1 ring-orange-500/25
+    shadow-lg shadow-orange-500/20
+    flex items-center justify-center
+  "
+>
+  <ServiceIcon n={s.n} />
+</div>
                 </div>
 
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">{s.t}</h3>
@@ -520,6 +550,28 @@ export default function Home() {
         : "Хотите построить карьеру в финансовой сфере и работать удалённо? Я предлагаю уникальную возможность пройти обучение и начать работать финансовым консультантом онлайн из любой точки Германии. Вы получаете:"}
     </p>
 
+    {/* CTA Button */}
+    <div className="mt-6 flex justify-center">
+      <a
+        href="https://forms.gle/VcQQtf6VNYcMz4Xc7"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          inline-flex items-center justify-center
+          rounded-full
+          bg-gradient-to-r from-orange-500 to-orange-600
+          px-7 py-3
+          text-sm md:text-base font-semibold text-white
+          shadow-lg shadow-orange-500/30
+          transition-all duration-300
+          hover:scale-105 hover:shadow-orange-500/45
+          active:scale-95
+        "
+      >
+        {lang === "de" ? "Zum Kurs anmelden" : "Регистрация на курс"}
+      </a>
+    </div>
+
     <div className="mt-10 grid gap-6 md:grid-cols-3">
       <div className="rounded-2xl border border-black/10 bg-white p-6 shadow">
         <h3 className="font-semibold text-slate-900">
@@ -620,7 +672,7 @@ export default function Home() {
           <div className="rounded-3xl border border-black/10 bg-white p-5 shadow-[0_20px_60px_rgba(2,6,23,0.08)]">
             <div className="flex items-end justify-between gap-4">
               <h2 className="text-xl md:text-2xl font-semibold text-slate-900">
-                {lang === "de" ? "Standort" : "Локация"}
+                {lang === "de" ? "Spitzenstraße 30, 42389 Wuppertal" : "Spitzenstraße 30, 42389 Wuppertal"}
               </h2>
               <p className="text-sm text-slate-500">{lang === "de" ? "Karte ansehen" : "Посмотреть на карте"}</p>
             </div>
