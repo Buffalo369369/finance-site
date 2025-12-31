@@ -626,15 +626,14 @@ export default function Home() {
             </div>
 
             <div className="mt-4 overflow-hidden rounded-2xl border border-black/10">
-              <iframe
-                title="Yandex Map"
-                src="https://yandex.ru/map-widget/v1/?ll=7.149632%2C51.256213&z=16&l=map&pt=7.149632,51.256213,pm2rdm"
-                width="100%"
-                height="420"
-                frameBorder="0"
-                allowFullScreen
-                className="block"
-              />
+             <iframe
+  src="https://yandex.ru/map-widget/v1/?ll=7.21028%2C51.26064&z=16&l=map&pt=7.21028,51.26064,pm2rdm"
+  width="100%"
+  height="420"
+  frameBorder="0"
+  allowFullScreen
+  className="rounded-2xl"
+/>
             </div>
           </div>
         </section>
