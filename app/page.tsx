@@ -375,7 +375,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section id="services" className="py-14 md:py-16">
+        <section id="services" className="py-10 md:py-16">
           <div className="flex flex-col items-center text-center">
             <h2 className="text-3xl font-semibold md:text-4xl text-slate-900">{t.servicesTitle}</h2>
             <p className="mt-3 max-w-2xl text-slate-600">{t.servicesSub}</p>
@@ -410,7 +410,7 @@ export default function Home() {
         </section>
 
         {/* Process */}
-        <section className="py-14 md:py-16">
+        <section className="py-10 md:py-16">
           <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_20px_60px_rgba(2,6,23,0.08)] md:p-10">
             <div className="flex flex-col gap-2">
               <h2 className="text-2xl font-semibold md:text-3xl text-slate-900">{t.processTitle}</h2>
@@ -432,7 +432,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="about" className="py-14 md:py-16">
+        <section id="about" className="py-10 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="text-3xl font-semibold md:text-4xl text-slate-900">{t.aboutTitle}</h2>
@@ -482,7 +482,7 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-14 md:py-16">
+        <section id="faq" className="py-10 md:py-16">
           <div className="flex flex-col items-center text-center">
             <h2 className="text-3xl font-semibold md:text-4xl text-slate-900">{t.faqTitle}</h2>
           </div>
@@ -506,7 +506,7 @@ export default function Home() {
           </div>
         </section>
         {/* Training */}
-<section id="training" className="py-14 md:py-16">
+<section id="training" className="py-10 md:py-16">
   <div className="mx-auto max-w-4xl text-center">
     <h2 className="text-3xl md:text-4xl font-semibold text-slate-900">
       {lang === "de"
@@ -558,7 +558,7 @@ export default function Home() {
 </section>
 
         {/* Contact */}
-        <section id="contact" className="py-14 md:py-16">
+        <section id="contact" className="py-10 md:py-16">
           <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_20px_60px_rgba(2,6,23,0.08)] md:p-10">
             <div className="grid gap-8 md:grid-cols-2 md:items-start">
               <div>
@@ -616,7 +616,7 @@ export default function Home() {
         </section>
 
         {/* Map */}
-        <section id="map" className="py-14 md:py-16">
+        <section id="map" className="py-10 md:py-16">
           <div className="rounded-3xl border border-black/10 bg-white p-5 shadow-[0_20px_60px_rgba(2,6,23,0.08)]">
             <div className="flex items-end justify-between gap-4">
               <h2 className="text-xl md:text-2xl font-semibold text-slate-900">
@@ -640,7 +640,7 @@ export default function Home() {
         </section>
 
         {/* Impressum */}
-<section id="impressum" className="mt-20 border-t border-black/10 py-16">
+<section id="impressum" className="mt-10 md:mt-20 border-t border-black/10 py-10 md:py-16">
   <div className="mx-auto max-w-4xl px-4 text-sm text-slate-600 leading-relaxed">
     <h2 className="mb-6 text-2xl font-semibold text-slate-900">
       Impressum
